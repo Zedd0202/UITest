@@ -18,31 +18,10 @@ class SampleUIUITests: XCTestCase {
         // Put teardown code here. This method is called after the invocation of each test method in the class.
     }
 
-    func testExample() throws {
-        // UI tests must launch the application that they test.
-        
-
-        // Use recording to get started writing UI tests.
-        // Use XCTAssert and related functions to verify your tests produce the correct results.
-    }
-    
-    func test_refactoring_something() {
-        let app = XCUIApplication()
-        let textField = app.textFields["textField"]
-        textField.tap()
-        textField.typeText("zzzz")
-        let addButton = app.navigationBars["SampleUI.View"].buttons["Add"]
-        addButton.tap()
-        textField.typeText("ddddd")
-        addButton.tap()
-        textField.typeText("hhhh")
-        addButton.tap()
-    }
-    
     func test_something() {
         
         let app = XCUIApplication()
-        app.textFields["textFields"].tap()
+        app.textFields["textField"].tap()
         
         let zKey = app.keys["z"]
         zKey.tap()
@@ -66,6 +45,19 @@ class SampleUIUITests: XCTestCase {
         hKey.tap()
         hKey.tap()
         hKey.tap()
+        addButton.tap()
+    }
+    
+    func test_refactoring_something() {
+        let app = XCUIApplication()
+        let textField = app.textFields["textField"]
+        textField.tap()
+        textField.typeText("zzzz")
+        let addButton = app.navigationBars["SampleUI.View"].buttons["Add"]
+        addButton.tap()
+        textField.typeText("ddddd")
+        addButton.tap()
+        textField.typeText("hhhh")
         addButton.tap()
     }
     
